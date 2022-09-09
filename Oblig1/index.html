@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>AB</title>
+	<title>AB Train Service</title>
 	<meta charset="utf-8">
 	<meta name="description=" content="Website for AB train transport service. For buying tickets for travel with train, costumer support, logging in, news about trains, department timetables, and more information about AB Train serice.">	
 
@@ -10,6 +10,7 @@
 <body>
 	<header>
 
+		<!--SVG Logo of the company-->
 		<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
 				<g transform="matrix(1 0 0 1 29.86 49)"  >
 				<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  x1="0" y1="0" x2="0" y2="0" />
@@ -64,9 +65,12 @@
 				</g>
 		</svg>
 		
+		<!--Short description of the webpage-->
 		<h1>AB Train Service</h1>
 		<p>On this website you can order train tickets and find information about our services.</p>
 
+
+		<!--Links to other pages on the website-->
 		<nav>
 
 			<a href=""><button>Prices</button></a>
@@ -87,11 +91,12 @@
 
 	<main>
 
-
+		<!--Form for collection information about where the user wants to travel, which includes depart and destination Station, time of departure, and number of traverlers.-->
 		<form action="" method="" id="orderTrainTicket">		
 			<fieldset>
 				<legend>Input information about your travel</legend>
 
+				<!--Input where user can choose between available stations-->
 				<label for="departStation">Travel from: </label>
 				<select id="departStation" required>
 					<option value="">Choose station</option>
@@ -101,6 +106,7 @@
 					<option value="Bergen">Bergen</option>
 				</select>
 
+				<!--Input where user can choose between available stations-->
 				<label for="destinationStation">Travel to: </label>
 				<select id="destinationStation" required>
 					<option value="">Choose station</option>
@@ -112,17 +118,20 @@
 				
 				<br>
 
+				<!--Input where user can select time and date of travel-->
 				<label for="date">Date: </label>
 				<input type="date" id="date" required>
 
 				<label for="time">Time: </label>
 				<input type="time" id="time" required>
 
+				<!--Number of traverlers-->
 				<label for="numTravelers">Number of travelers: </label>
 				<input type="number" id="numTravelers" value="1" size="3" min="1" max="10" required>
 
 			</fieldset>
 			<fieldset>
+				<!--Where to user has to press to find travel options-->
 				<button id="getTravel" type="submit">Get Travel</button>
 			</fieldset>
 		</form>
@@ -145,6 +154,7 @@
 
 			<aside></aside>
 		</article>
+
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d973.3332148080773!2d10.6925756!3d60.7967916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641da22dae2e2cd%3A0xca75f0991856f4f8!2sGj%C3%B8vik%20stasjon!5e0!3m2!1sno!2sno!4v1662718621587!5m2!1sno!2sno" width="1200px" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 		</iframe>
 		
@@ -154,6 +164,7 @@
 	<footer>
 		<hr>
 
+		<!--SVG Logo of the company-->
 		<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
 			<g transform="matrix(1 0 0 1 29.86 49)"  >
 			<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  x1="0" y1="0" x2="0" y2="0" />
@@ -208,9 +219,13 @@
 			</g>
 		</svg>
 
-		<p>
-			Contact information	
-		</p>
+		<!--Contact information of the website-->
+		<address>
+			Contact information:<br>
+			Mail: <a href="">contact@AB.no</a> <br>
+			Phone: +47 400 00 000 <br>
+			Address: Jernbanetorvet 1, 2819 Gjovik 
+		</address>
 	</footer>
 </body>
 
