@@ -79,18 +79,61 @@
 
 
 		</nav>
+
+		<hr>
 	</header>
+
+	<br>
 
 	<main>
 
 
-		<form>
+		<form action="" method="" id="orderTrainTicket">		
+			<fieldset>
+				<legend>Input information about your travel</legend>
 
+				<label for="departStation">Travel from: </label>
+				<select id="departStation" required>
+					<option value="">Choose station</option>
+					<option value="Oslo">Oslo</option>
+					<option value="Gjovik">Gjovik</option>
+					<option value="Trondheim">Trondheim</option>
+					<option value="Bergen">Bergen</option>
+				</select>
+
+				<label for="destinationStation">Travel to: </label>
+				<select id="destinationStation" required>
+					<option value="">Choose station</option>
+					<option value="Oslo">Oslo</option>
+					<option value="Gjovik">Gjovik</option>
+					<option value="Trondheim">Trondheim</option>
+					<option value="Bergen">Bergen</option>
+				</select>
+				
+				<br>
+
+				<label for="date">Date: </label>
+				<input type="date" id="date" required>
+
+				<label for="time">Time: </label>
+				<input type="time" id="time" required>
+
+				<label for="numTravelers">Number of travelers: </label>
+				<input type="number" id="numTravelers" value="1" size="3" min="1" max="10" required>
+
+			</fieldset>
+			<fieldset>
+				<button id="getTravel" type="submit">Get Travel</button>
+			</fieldset>
 		</form>
+
+		<br>
 
 		<iframe>
 
 		</iframe>
+
+		<br>
 
 		<figure>
 			<img src="images/Tog.jpg" alt="Train" title="train in mid day" with="800" height="500" loading="lazy">
@@ -98,6 +141,8 @@
 				One of the trains you can travel in
 			</figcaption>
 		</figure>
+
+		<br>
 
 		<article>
 
@@ -109,6 +154,8 @@
 	
 
 	<footer>
+		<hr>
+
 		<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
 			<g transform="matrix(1 0 0 1 29.86 49)"  >
 			<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  x1="0" y1="0" x2="0" y2="0" />
