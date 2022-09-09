@@ -1,0 +1,3 @@
+Our website are for people of all ages who want to or are considering  to travel by train with our company. They will visit our site with the intention of either buying or modifying a train ticket, or to find information about our services.
+
+When using our website our target audience will navigate and browse our pages, and interact with the website by buying tickets, logging in or signing up, and contact support. They will need information about our departing and arrival times, our prices, our locations, about any delays/work on tracks, about possibilities for refunds and other modifications of a ticket, contact information, and other information about our service and company.
