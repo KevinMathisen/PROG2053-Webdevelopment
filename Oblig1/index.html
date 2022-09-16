@@ -5,11 +5,13 @@
 	<!--A icon that resembles a train-->
 	<link rel="icon" href="images/train_FILL0_wght400_GRAD0_opsz48.png">
 	<meta charset="utf-8">
+	<!--Implementation of task 4.a. Describes the content of the page, which can help the website rank higher on search engines. As seen in lecture week 35, slide 35-->
 	<meta name="description=" content="Website for AB train transport service. For buying tickets for travel with train, costumer support, logging in, news about trains, department timetables, and more information about AB Train serice.">	
 </head>
 
 <body>
 	<header>
+		<!--Implementation of task 4.b. Contains primary navigation, a logo image (svg), and som text to describe the website.-->
 
 		<!--SVG Logo of the company-->
 		<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
@@ -88,7 +90,7 @@
 		</nav>
 		-->
 
-		<!--Links to other pages on the website-->
+		<!--Primary navigation to other pages on the website-->
 		<nav>
 
 			<a href=""><button>Prices</button></a>
@@ -108,12 +110,13 @@
 
 	<main>
 
-		<!--Form for collection information about where the user wants to travel, which includes depart and destination Station, time of departure, and number of traverlers.-->
+		<!--Implementation of task 4.f, Form for collection information about where the user wants to travel, which includes depart and destination Station, time of departure, and number of traverlers. Seen in lecture week 35, slide 10-19-->
 		<form action="" method="" id="orderTrainTicket">		
 			<fieldset>
+				<!--Groups related form inpupts to make the form more accessible to users.-->
 				<legend>Input information about your travel</legend>
 
-				<!--Input where user can choose between available stations-->
+				<!--Input where user can choose between available stations, makes it easier for user to choose station as they choose from a list rather than type in themselfs.-->
 				<label for="departStation">Travel from: </label>
 				<select id="departStation" required>
 					<option value="">Choose station</option>
@@ -123,7 +126,7 @@
 					<option value="Bergen">Bergen</option>
 				</select>
 
-				<!--Input where user can choose between available stations-->
+				<!--Input where user can choose between available stations, makes it easier for user to choose station as they choose from a list rather than type in themselfs.-->
 				<label for="destinationStation">Travel to: </label>
 				<select id="destinationStation" required>
 					<option value="">Choose station</option>
@@ -135,7 +138,7 @@
 				
 				<br>
 
-				<!--Input where user can select time and date of travel-->
+				<!--Input where user can select time and date of travel, the use of date and time input makes it intuitvive for user to enter correct values.-->
 				<label for="date">Date: </label>
 				<input type="date" id="date" required>
 
@@ -144,11 +147,12 @@
 
 				<!--Number of traverlers-->
 				<label for="numTravelers">Number of travelers: </label>
-				<input type="number" id="numTravelers" value="1" size="3" min="1" max="10" required>
+				<input type="number" id="numTravelers" value="1" min="1" max="10" required>
 
 			</fieldset>
 			<fieldset>
 				<!--Where to user has to press to find travel options-->
+				<!--Will notify the user if there are any forms they havent filled out, as all inputs have to property reguired, which will let the user get feedback from the form. Seen in lecture week 35, slide 18-19-->
 				<button id="getTravel" type="submit">Get Travel</button>
 			</fieldset>
 		</form>
@@ -158,7 +162,12 @@
 		<br>
 
 		<figure>
+<<<<<<< HEAD
 			<img src="images/Tog.jpg" alt="A2B Train" title="Your next A2B train" with="700" height="570" loading="eager">
+=======
+			<!--Implementation of 4.c. Figure containing a picture of a train illustrating content of website. Containes -->
+			<img src="images/Tog.jpg" alt="A2B Train" title="train in mid day" with="800" height="600" loading="eager">
+>>>>>>> 76c73e3cb1ee8ac13b94e888dd1fc5fa7a4cf22a
 			<figcaption>
 				<p>One of our <strong>beutiful</strong> passanger trains that <b>you</b> could travel in!</p>
 			</figcaption>
@@ -180,9 +189,11 @@
 			<aside></aside>
 		</article>
 
+		<!--Implementation of 4.d. Embeds google maps linked to our physical address. Seen in lecture week 35, slide 34-->
 		<h2>Come and visit us!</h2>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d973.3332148080773!2d10.6925756!3d60.7967916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641da22dae2e2cd%3A0xca75f0991856f4f8!2sGj%C3%B8vik%20stasjon!5e0!3m2!1sno!2sno!4v1662718621587!5m2!1sno!2sno" width="1200px" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 		</iframe>
+
 		<article>
 			<!--This is an article over our sevices-->
 			<h2>Our <abbr title="Headquarters">HQ</abbr></h2>
@@ -206,6 +217,7 @@
 		<!--Adding the ability to hid som text so that the reader could unhid the text to read the answer-->
 		
 		<br><br>
+		<!--Uses relative link to let user jump around on the webpage, as seen in slide 48, lecture week 34.-->
 		<a href="#"><h4>Back to Top</h4></a>
 	</main>
 	
@@ -268,9 +280,10 @@
 			</g>
 		</svg>
 
-		<!--Contact information of the website-->
+		<!--Implementation of tasks 4.g, Contact information of the website-->
 		<address>
 			Contact information:<br>
+			<!--Email link for easy contact, as seen in slide 54, leture week 34-->
 			Mail: <a href="">contact@AB.no</a> <br>
 			Phone: +47 400 00 000 <br>
 			Address: Jernbanetorvet 1, 2819 Gjovik 
