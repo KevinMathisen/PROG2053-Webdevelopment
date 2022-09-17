@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--lang is specified to be in english as stated in slide 23 from week 34-->
 <html lang="en">
 <head>
 	<title>A2B Train Service</title>
@@ -72,23 +73,7 @@
 		<h1>A2B Train Service</h1>
 		<p>On this website you can order train tickets and find information about our services.</p>
 
-		<!--
-		<br>
-		<h2>Main menu list</h2>
-		<nav aria-labelledby="main-page-navigation">
-			<ul>
-				<li>
-					<a href="#service"></a>
-				</li>
-				<li>
-					<a href="#visit"></a>
-				</li>
-				<li>
-					<a href=""></a>
-				</li>
-			</ul>
-		</nav>
-		-->
+		
 
 		<!--Primary navigation to other pages on the website-->
 		<nav>
@@ -99,15 +84,35 @@
 
 			<a href="">News</a>
 
-			<a href="">Support</a>
+<!--OBS!!!, skal vi gjøre dette?-->			<button><a href="">Support</a></button>
 
 		</nav>
 
 		<hr>
 	</header>
 
-	<br>
-
+	<!--Making an unorderd list to hold a small set of destinations as an navigation tool for the user. can be seen something alike in slide 51-53 form week 34.-->
+	<h3>Main menu list</h3>
+		<!--Innformation about nav was also found in slide 48 from week 35-->
+		<nav aria-labelledby="main-page-navigation">
+			<ul>
+				<li>
+					<!--From slide 51-53 form week 34, "#name" is the "id" of the object i want to go to.-->
+					<a href="#orderTrainTicket">Order a train itcket</a>
+				</li>
+				<li>
+					<a href="#service">Our services</a>
+				</li>
+				<li>
+					<a href="#visit">Find us</a>
+				</li>
+				<li>
+					<a href="#questions">Frequently Asked Questions (FAQ)</a>
+				</li>
+			</ul>
+		</nav>
+	
+	<br><br><br>
 	<main>
 
 		<!--Implementation of task 4.f, Form for collection information about where the user wants to travel, which includes depart and destination Station, time of departure, and number of traverlers. Seen in lecture week 35, slide 10-19-->
@@ -163,63 +168,79 @@
 
 		<figure>
 			<!--Implementation of 4.c. Figure containing a picture of a train illustrating content of website. Containes -->
-			<img src="images/Tog.jpg" alt="A2B Train" title="train in mid day" width="800" height="600" loading="eager">
+			<img src="images/Tog.jpg" alt="A2B Train" title="Your next A2B train" width="800" height="600" loading="eager">
 			<figcaption>
 				<p>One of our <strong>beutiful</strong> passanger trains that <b>you</b> could travel in!</p>
 			</figcaption>
 		</figure>
 
-		<article>
+		<article id="service">
+			<!--This is an article over our sevices-->
 			<h2>Our services</h2>
-			<p> We in <b>A2B</b> are all about <strong>costumer satisfaction</strong>, and have gone to great lengts to take care of our costumers. To accomplish <br> 
-				this we have made great improvments to our trains to be softer, quieter, more luxurius and many more improvements to make <br> 
-				your trip as plesent as possible. With sponsors from all around the world, our prices are groundbreaking while you also arrive <br>
-				to your destination 30% faster than any other company could accomplish.</p>
+			<p> We in <b>A2B</b> are all about <strong>costumer satisfaction</strong>, and have gone to <u>great lengts</u> to take care of our costumers. The term
+				<i>comfort</i><br> describes <q>a state of ease and freedom from pain or constraint</q>, which we in A2B have tried to give our costomers <br>
+				by making great improvements to our trains. We have made our trains <u>softer</u>, <u>quieter</u> and <u>luxurius</u> with many more improvements to make <br> 
+				<strong>your</strong> trip as plesent as possible. And with sponsors from all around the world, <strong>our prices are groundbreaking</strong> while also being <br>
+				<u>30% faster than any other company</u> could accomplish.</p>
 		</article>
 
+		<!--This is an "aside", that is used to pinpoint some funfacts about our company. information about this was found in slide 49 from week 35-->
 		<aside>
-			<p>A2B was founded in 2019 and has been going strong with 100 emploees.</p>
+			<p>A2B was founded in 2019 and with 100 hard working <br>
+				emploees we aim to <i>revolutionize</i> the train industry!</p>
 		</aside>
 
 		<br>
 
 		<!--Implementation of 4.d. Embeds google maps linked to our physical address. Seen in lecture week 35, slide 34-->
-		<h2>Come and visit us!</h2>
+		<h2 id="visit">Come and visit us!</h2>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d973.3332148080773!2d10.6925756!3d60.7967916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641da22dae2e2cd%3A0xca75f0991856f4f8!2sGj%C3%B8vik%20stasjon!5e0!3m2!1sno!2sno!4v1662718621587!5m2!1sno!2sno" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
 		</iframe>
+		<p>This is where you could find our <abbr title="Headquarters">HQ</abbr>.</p>
 
+		<br>
 		<article>
-			<!--This is an article over our sevices-->
-			<h2>Our <abbr title="Headquarters">HQ</abbr></h2>
+<!--OBS!!! skulle vi fjerne dette avsnittet?-->			<h2>Our <abbr title="Headquarters">HQ</abbr></h2>
 			<p>	We in A2B are all about costumer satisfaction, and have gone to great lengts to take kare of our costumers. To accomplish <br> 
 				this we have made great improvments to our trains to be softer, quieter, more luxurius and many more improvements to make <br> 
 				your trip as plesent as possible. With sponsors from all around the world, our prices are groundbreaking while you also arrive <br>
 				to your destination 30% faster than any other company could accomplish.</p>
-<!--OBS!!!-->				<!--Spør læreren om det er greit at du har samme tekst på to eller flere steder på nettsiden. si at dette vil komme til å endre seg men bare at dette er en midlertidig løsning.-->
 		<br>
 		</article>
 		
 		
 		<br>
-		<h2>Often asked questions</h2>
-		<aside>
-			<details>
-				<summary>Is this real?</summary>
-				<p><strong>Yes!!!</strong></p>
-			</details>
-			<br>
-			<details>
-				<summary>Are your trains really that confortable?</summary>
-				<p>According to one of our costumers, <q>The A2B trains are like a <i>Palace on Wheels</i></q>. So yes, they are :)</p>
-			</details>
-			<br>
-			<details>
-				<summary>Can i eat in the train?</summary>
-				<p><u>Ofcorse you can</u>, we do also offer a <strong>big</strong> selection of snacks on board the train</p>
-			</details>
-
-		</aside>
-		<!--Adding the ability to hid som text so that the reader could unhid the text to read the answer-->
+		<article id="questions">
+			<h2>Frequently Asked Questions</h2>
+			<!--Adding the ability to hid som text so that the reader could unhid the text to read the answer-->
+			<aside>
+				<details>
+					<summary>Is this real?</summary>
+					<p><strong>Yes!!!</strong></p>
+				</details>
+				<br>
+				<details>
+					<summary>Are your trains really that confortable?</summary>
+					<p>According to one of our costumers, <q>The A2B trains are like a <i>Palace on Wheels</i></q>. So yes, they are :)</p>
+				</details>
+				<br>
+				<details>
+					<summary>Can i eat in the train?</summary>
+					<p><u>Ofcorse you can</u>, we do also offer a <strong>big</strong> selection of snacks on board the train.</p>
+				</details>
+				<br>
+				<details>
+					<summary>What material are the seats made out of?</summary>
+					<p>We in A2B care about our costomurs confort and do therefor use syntetich leather for the seats.</p>
+				</details>
+				<br>
+				<details>
+					<summary>Are your trains environmentally frendly?</summary>
+					<p>Yes, we in A2B are very conscious of our carbon footprint and therefor our trains run on <b>pure electricity</b> <br> 
+						that is harvested from natural resorces.</p>
+				</details>
+			</aside>
+		</article>
 		
 		<br><br>
 		<!--Uses relative link to let user jump around on the webpage, as seen in slide 48, lecture week 34.-->
@@ -289,8 +310,8 @@
 		<address>
 			Contact information:<br>
 			<!--Email link for easy contact, as seen in slide 54, leture week 34-->
-			Mail: <a href="">contact@AB.no</a> <br>
-			Phone: +47 400 00 000 <br>
+			Mail: <a href="mailto:contact@A2B.no">contact@A2B.no</a> <br>
+			Phone: <a href="tel:+47 400 00 000">+47 400 00 000</a> <br>
 			Address: Jernbanetorvet 1, 2819 Gjovik 
 		</address>
 	</footer>
