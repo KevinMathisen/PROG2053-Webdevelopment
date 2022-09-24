@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <!--lang is specified to be in english as stated in slide 23 from week 34-->
 <html lang="en">
+<div id="mainContainer">
+
 <head>
 	<title>A2B Train Service</title>
 	<!--A icon that resembles a train-->
 	<link rel="icon" href="images/train_FILL0_wght400_GRAD0_opsz48.png">
+	<link href="styles.css" type="text/css" rel="stylesheet">
 	<meta charset="utf-8">
 	<!--Implementation of task 4.a. Describes the content of the page, which can help the website rank higher on search engines. As seen in lecture week 35, slide 35-->
 	<meta name="description=" content="Website for AB train transport service. For buying tickets for travel with train, costumer support, logging in, news about trains, department timetables, and more information about AB Train serice.">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -15,164 +19,151 @@
 		<!--Implementation of task 4.b. Header contains primary navigation, a logo image (svg), and som text to describe the website.-->
 
 		<!--SVG Logo of the company-->
-		<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
-				<g transform="matrix(1 0 0 1 29.86 49)"  >
-				<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  x1="0" y1="0" x2="0" y2="0" />
-				</g>
-				<g transform="matrix(0.15 0 0 1 50.93 74)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0.08 0 0 0.85 14.04 44.44)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0.08 0 0 0.85 41.47 44.87)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0.08 0 0 0.85 70.04 46.14)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0.08 0 0 0.87 95.18 45.95)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0 0.03 -0.27 0.01 28.43 23.02)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0 0.03 -0.27 0.01 26.79 45.24)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0 0.03 -0.29 0.01 82.24 24.13)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0 0.04 -0.21 0.01 83.18 45.48)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0 0.04 -0.2 0.01 82.17 67.06)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(1.12 0 0 0.12 55.23 11.87)"  >
-				<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(106,106,106); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(1.1 0 0 0.12 54.23 79)"  >
-				<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(116,116,116); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0.04 0 0 0.43 14.33 41.94)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0.03 0 0 0.43 40.46 43.22)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0.04 0 0 0.46 71.3 46.16)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-				<g transform="matrix(0.03 0 0 0.43 93.24 46.15)"  >
-				<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-				</g>
-		</svg>
+		<div id="headerLogo">
+			<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
+					<g transform="matrix(1 0 0 1 29.86 49)"  >
+					<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  x1="0" y1="0" x2="0" y2="0" />
+					</g>
+					<g transform="matrix(0.15 0 0 1 50.93 74)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0.08 0 0 0.85 14.04 44.44)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0.08 0 0 0.85 41.47 44.87)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0.08 0 0 0.85 70.04 46.14)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0.08 0 0 0.87 95.18 45.95)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0 0.03 -0.27 0.01 28.43 23.02)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0 0.03 -0.27 0.01 26.79 45.24)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0 0.03 -0.29 0.01 82.24 24.13)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0 0.04 -0.21 0.01 83.18 45.48)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0 0.04 -0.2 0.01 82.17 67.06)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(1.12 0 0 0.12 55.23 11.87)"  >
+					<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(106,106,106); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(1.1 0 0 0.12 54.23 79)"  >
+					<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(116,116,116); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0.04 0 0 0.43 14.33 41.94)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0.03 0 0 0.43 40.46 43.22)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0.04 0 0 0.46 71.3 46.16)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+					<g transform="matrix(0.03 0 0 0.43 93.24 46.15)"  >
+					<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+					</g>
+			</svg>
+		</div>
+
+		<div id="headerTitle">
+			<h1>A2B Train Service</h1>
+		</div>
 		
 		<!--Short description of the webpage-->
-		<h1>A2B Train Service</h1>
-		<p>On this website you can order train tickets and find information about our services.</p>
+		<div id="headerDesc">
+			<p>On this website you can order train tickets and find information about our services.</p>
+		</div>
+		
 
 		<!--Primary navigation to other pages on the website-->
-		<nav>
+		<nav id="primNav">
 			<a href="">Prices</a>
 			<a href="">About us</a>
 			<a href="">News</a>
 			<a href="">Support</a>
 		</nav>
 
-		<hr>
 	</header>
 	
-	<br>
 
 	<main>
-
-		<section>
-			<!--Making an unorderd list to hold a small set of destinations as an navigation tool for the user. can be seen something alike in slide 51-53 form week 34.-->
-			<h3>Main menu list</h3>
-			<!--Innformation about nav was also found in slide 48 from week 35-->
-			<nav>
-				<ul>
-					<li>
-						<!--From slide 51-53 form week 34, "#name" is the "id" of the object i want to go to.-->
-						<a href="#orderTrainTicket">Order a train itcket</a>
-					</li>
-					<li>
-						<a href="#service">Our services</a>
-					</li>
-					<li>
-						<a href="#visit">Find us</a>
-					</li>
-					<li>
-						<a href="#questions">Frequently Asked Questions (FAQ)</a>
-					</li>
-				</ul>
-			</nav>
-		</section>
-
-		<br> <br>
 
 		<!--Implementation of task 4.f, Form for collection information about where the user wants to travel, which includes depart and destination Station, time of departure, and number of traverlers. Seen in lecture week 35, slide 10-19-->
 		<form id="orderTrainTicket">		
 			<fieldset>
 				<!--Groups related form inpupts to make the form more accessible to users.-->
 				<legend>Input information about your travel</legend>
-
+			<div id="formContainer">
 				<!--Input where user can choose between available stations, makes it easier for user to choose station as they choose from a list rather than type in themselfs.-->
-				<label for="departStation">Travel from: </label>
-				<select id="departStation" required>
-					<option value="">Choose station</option>
-					<option value="Oslo">Oslo</option>
-					<option value="Gjovik">Gjovik</option>
-					<option value="Trondheim">Trondheim</option>
-					<option value="Bergen">Bergen</option>
-				</select>
-
-				<!--Input where user can choose between available stations, makes it easier for user to choose station as they choose from a list rather than type in themselfs.-->
-				<label for="destinationStation">Travel to: </label>
-				<select id="destinationStation" required>
-					<option value="">Choose station</option>
-					<option value="Oslo">Oslo</option>
-					<option value="Gjovik">Gjovik</option>
-					<option value="Trondheim">Trondheim</option>
-					<option value="Bergen">Bergen</option>
-				</select>
+				<div id="depSDiv">
+					<label for="departStation">Travel from: </label>
+					<select id="departStation" required>
+						<option value="">Choose station</option>
+						<option value="Oslo">Oslo</option>
+						<option value="Gjovik">Gjovik</option>
+						<option value="Trondheim">Trondheim</option>
+						<option value="Bergen">Bergen</option>
+					</select>
+				</div>
 				
-				<br>
+				<!--Input where user can choose between available stations, makes it easier for user to choose station as they choose from a list rather than type in themselfs.-->
+				<div id="desSDiv">
+					<label for="destinationStation">Travel to: </label>
+					<select id="destinationStation" required>
+						<option value="">Choose station</option>
+						<option value="Oslo">Oslo</option>
+						<option value="Gjovik">Gjovik</option>
+						<option value="Trondheim">Trondheim</option>
+						<option value="Bergen">Bergen</option>
+					</select>
+				</div>
 
 				<!--Input where user can select time and date of travel, the use of date and time input makes it intuitvive for user to enter correct values.-->
-				<label for="date">Date: </label>
-				<input type="date" id="date" required>
+				<div id="dateDiv">
+					<label for="date">Date: </label>
+					<input type="date" id="date" required>
+				</div>
 
-				<label for="time">Time: </label>
-				<input type="time" id="time" required>
+				<div id="timeDiv">
+					<label for="time">Time: </label>
+					<input type="time" id="time" required>
+				</div>
 
 				<!--Number of traverlers-->
-				<label for="numTravelers">Number of travelers: </label>
-				<input type="number" id="numTravelers" value="1" min="1" max="10" required>
+				<div id="nTDiv">
+					<label for="numTravelers">Number of travelers: </label>
+					<input type="number" id="numTravelers" value="1" min="1" max="10" required>
+				</div>
 
-			</fieldset>
-			<fieldset>
 				<!--Where to user has to press to find travel options-->
 				<!--Will notify the user if there are any forms they havent filled out, as all inputs have to property reguired, which will let the user get feedback from the form. Seen in lecture week 35, slide 18-19-->
-				<button id="getTravel" type="submit">Get Travel</button>
+				<button id="getTravel" type="submit">Find travel</button>
+			</div>
+
 			</fieldset>
 		</form>
 
-		<br>
 
-		<figure>
+		<figure id="pictureTrain">
 			<!--Implementation of 4.c. Figure containing a picture of a train illustrating content of website. Containes -->
-			<img src="images/Tog.jpg" alt="A2B Train" title="Your next A2B train" width="800" height="600" loading="eager">
+			<img src="images/Tog.jpg" alt="A2B Train" title="Your next A2B train" width="100%" height="auto" loading="eager">
 			<figcaption>
 				<p>One of our <strong>beutiful</strong> passanger trains that <b>you</b> could travel in!</p>
 			</figcaption>
 		</figure>
 
-		<br>
 
-		<article id="service">
+		<article id="ourService">
 			<!--Implementation of 4.e. This is an article over our sevices, using semantic markup to provide additional meaning to contents of arcticle, like seen in lecture week 34, slide 27-37.-->
 			<h2>Our services</h2>
 			<p> We in <b>A2B</b> are all about <strong>costumer satisfaction</strong>, and have gone to <u>great lengts</u> to take care of our costumers. The term
@@ -188,17 +179,15 @@
 			</aside>
 		</article>
 
-		<br>
 
-		<section>
+		<section id="iframeMaps">
 			<!--Implementation of 4.d. Embeds google maps linked to our physical address. Seen in lecture week 35, slide 34-->
 			<h2 id="visit">Come and visit us!</h2>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d973.3332148080773!2d10.6925756!3d60.7967916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641da22dae2e2cd%3A0xca75f0991856f4f8!2sGj%C3%B8vik%20stasjon!5e0!3m2!1sno!2sno!4v1662718621587!5m2!1sno!2sno" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+			<iframe width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d973.3332148080773!2d10.6925756!3d60.7967916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641da22dae2e2cd%3A0xca75f0991856f4f8!2sGj%C3%B8vik%20stasjon!5e0!3m2!1sno!2sno!4v1662718621587!5m2!1sno!2sno">
 			</iframe>
-			<p>This is where you could find our <abbr title="Headquarters">HQ</abbr>.</p>
+			<p id="textForIframe">This is where you could find our <abbr title="Headquarters">HQ</abbr>.</p>
 		</section>
 		
-		<br>
 
 		<article id="questions">
 			<h2>Frequently Asked Questions</h2>
@@ -232,18 +221,17 @@
 			</aside>
 		</article>
 		
-		<br><br>
 
 		<!--Uses relative link to let user jump around on the webpage, as seen in slide 48, lecture week 34.-->
-		<a href="#"><h4>Back to Top</h4></a>
+		<section id="jumpToTop">
+			<a href="#"><h4>Back to Top</h4></a>
+		</section>
 
 	</main>
 	
 	<br>
 
 	<footer>
-
-		<hr>
 
 		<!--SVG Logo of the company-->
 		<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
@@ -312,4 +300,5 @@
 	</footer>
 </body>
 
+</div>
 </html>

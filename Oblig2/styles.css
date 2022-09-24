@@ -1,0 +1,200 @@
+
+
+#mainContainer {
+	display: grid;
+	grid-template: 
+		"header header header" auto
+		". main . " auto
+		"footer footer footer" auto
+		/ 20px auto 20px;
+}
+header {
+	grid-area: header;
+	border-bottom: 2px solid black;
+}
+main {
+	grid-area: main;
+}
+footer {
+	border-top: 2px solid black;
+	padding-top: 1em;
+	grid-area: footer;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+
+header {
+	display: grid;
+	grid-template: 
+		"logo title" auto
+		"logo desc" auto
+		"nav nav" auto
+		/ 1fr 2fr;
+}
+#headerLogo {
+	grid-area: logo;
+}
+#headerTitle {
+	grid-area: title;
+}
+#headerDesc {
+	grid-area: desc;
+}
+#primNav {
+	margin: 1em;
+	grid-area: nav;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+
+main {
+	display: grid;
+	grid-template:
+		"forms" auto
+		"article" auto
+		"figure" auto
+		"iframe" auto
+		"faq" auto
+		"jumpToTop" auto
+		/ 1fr;
+	gap: 20px;
+	justify-items: center;
+}
+#orderTrainTicket {
+	grid-area: forms;
+}
+#pictureTrain {
+	grid-area: figure;
+	min-width: 100px;
+}
+#ourService {
+	grid-area: article;
+	margin: 1em;
+}
+#iframeMaps {
+	grid-area: iframe;
+	margin: 1em;
+}
+#questions {
+	grid-area: faq;
+	margin: 1em;
+}
+#jumpToTop {
+	grid-area: jumpToTop;
+}
+
+#textForIframe {
+	float: right;
+}
+
+#orderTrainTicket {
+	margin-top: 2em;
+}
+#orderTrainTicket > * {
+	font-size: 20px;
+}
+
+
+
+#formContainer {
+	margin-top: 1em;
+	display: grid;
+	grid-template: 
+		"depS desS" 2em
+		"date time" 2em
+		"nT nT" 2em
+		"getT getT" 2em
+		/ 1fr 1fr;
+	justify-items: center;
+	gap: 1em;
+}
+#depSDiv {
+	grid-area: depS;
+}
+#desSDiv {
+	grid-area: desS;
+}
+#dateDiv {
+	grid-area: date;
+}
+#timeDiv {
+	grid-area: time;
+}
+#nTDiv {
+	grid-area: nT;
+}
+
+#getTravel {
+	grid-area: getT;
+	cursor: pointer;
+	box-shadow: 0 4px #999;
+	border: 1px solid grey;
+	border-radius: 4px;
+}
+#getTravel:hover {
+	background-color: #d8d8d8;
+	border: 1px solid grey;
+	border-radius: 4px;
+}
+#getTravel:active {
+	box-shadow: 0px 2px #999;
+	border:none;
+	border-radius: 4px;
+}
+
+#departStation:focus {
+	background-color: #e2e2e2;
+}
+#destinationStation:focus {
+	background-color: #e2e2e2;
+}
+#date:focus {
+	background-color: #e2e2e2;
+}
+#time:focus {
+	background-color: #e2e2e2;
+}
+#numTravelers:focus {
+	background-color: #e2e2e2;
+}
+
+
+
+
+
+
+@media (min-width: 45em) {
+	#mainContainer {
+		grid-template: 
+			"header header header" auto
+			". main . " auto
+			"footer footer footer" auto
+			/ 40px auto 40px;
+	}
+
+	main {
+		grid-template:
+			"forms forms forms forms" auto
+			"article article article figure" auto
+			"iframe iframe faq faq" auto
+			". jumpToTop jumpToTop ." auto
+			/ 2fr 1fr 1fr 2fr;
+	}
+
+	#formContainer {
+		margin-top: 1em;
+		display: grid;
+		grid-template: 
+			"depS depS desS desS" 2em
+			"date time time nT" 2em
+			". getT getT ." 2em
+			/ 2fr 1fr 1fr 2fr;
+		justify-items: center;
+		gap: 1em;
+	}
+}
