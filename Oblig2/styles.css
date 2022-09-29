@@ -1,5 +1,4 @@
 
-
 #mainContainer {
 	display: grid;
 	grid-template: 
@@ -14,6 +13,9 @@ header {
 }
 main {
 	grid-area: main;
+	background-color: #F2F2F2;
+	box-shadow: 0 0 0 100vmax #F2F2F2;
+	clip-path: inset(0 -100vmax); 		
 }
 footer {
 	border-top: 2px solid black;
@@ -23,7 +25,9 @@ footer {
 	justify-content: space-evenly;
 }
 
-
+h1,h2{
+font-family: 'Source Sans Pro', sans-serif;
+}
 
 header {
 	display: grid;
@@ -135,6 +139,7 @@ main {
 	box-shadow: 0 4px #999;
 	border: 1px solid grey;
 	border-radius: 4px;
+	background-color: white;
 }
 #getTravel:hover {
 	background-color: #d8d8d8;
