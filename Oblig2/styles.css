@@ -53,6 +53,35 @@ header {
 	display: flex;
 	justify-content: space-evenly;
 }
+#primNav a {
+	color:white;
+	text-decoration: none;
+	font-weight: 100%;
+	border-radius: 5px;
+	padding:10px;
+	width:6.5em;
+	background-color: #404040;
+	border:none;
+	box-shadow: 1px 1px 1px black;
+	align-items: center;
+	display: flex;
+	
+}
+
+#iconBackground {
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	display: inline-block;
+	margin-right: 0.5625rem;
+	padding: 3px;
+	border-color: red;
+	background-color: #FF7A59;
+}
+#iconSize {
+	width:24px;
+	height:24px;
+}
 
 
 
