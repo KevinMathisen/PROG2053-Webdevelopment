@@ -87,13 +87,37 @@ The element is also using relative sizes for width.*/
 	border-color: red;
 	background-color: #FF7A59;
 }
+
 #iconSize {
 	width:24px;
 	height:24px;
 }
 
+#content{
+	float: left;
+	position: relative;
+	max-width: 50em;
+}
 
-/*Implementation of task 3b, use CSS grid layout to create a responsive main.*/
+/*Implementation of task 3b, use Css grid layout to create a responsive main.*/
+#funFact {
+	border: 3px solid black;
+	border-radius: 10px;
+	background-color: #FF7A59;
+	/*border: 1em solid 	#A0A0A0;
+	padding: 1%;
+	width: 40%;*/'
+	text-align: center;
+	/*border-radius: 10px;
+	-moz-border-radius: 2%;
+	-webkit-border-radius: 3%;*/
+	padding-left:  2%;
+	padding-right: 2%;
+	/*margin-left: 0%;*/
+	float: left;
+	font-style: normal;
+}
+
 main {
 	display: grid;
 	grid-template:
@@ -115,6 +139,10 @@ main {
 	min-width: 100px;
 }
 #ourService {
+	grid-area: article;
+	margin: 1em;
+}
+#content {
 	grid-area: article;
 	margin: 1em;
 }
