@@ -55,6 +55,8 @@ header {
 The element is also using relative sizes for width.*/
 #primNav {
 	margin: 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	grid-area: nav;
 	width: 100%;
 	display: flex;
@@ -145,6 +147,7 @@ main {
 #content {
 	grid-area: article;
 	margin: 1em;
+	margin-top: 0px;
 }
 #iframeMaps {
 	grid-area: iframe;
