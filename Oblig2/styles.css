@@ -92,9 +92,10 @@ The element is also using relative sizes for width.*/
 }
 
 #content{
-	float: left;
+	float:inline-start;
 	position: relative;
 	max-width: 50em;
+	font-size: large;
 }
 
 /*Implementation of task 3b, use Css grid layout to create a responsive main.*/
@@ -112,9 +113,23 @@ The element is also using relative sizes for width.*/
 	padding-left:  2%;
 	padding-right: 2%;
 	/*margin-left: 0%;*/
-	float: left;
+	float:left;
 	font-style: normal;
+	font-size:medium;
 }
+
+#questions {
+	border: 5px solid black;
+	padding: 1em;
+	border-spacing: 1em;
+	border-radius: 10px;
+	background-color: #FF7A59;
+	font-size: medium;
+	min-height: 1em;
+	max-width: 42em;
+}
+
+
 
 main {
 	display: grid;
