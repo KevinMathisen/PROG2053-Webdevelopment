@@ -1,4 +1,8 @@
 
+body {
+	margin: 0px;
+}
+
 /*Implementation of task 3b, use CSS grid layout to create a responsive body with sidebars.*/
 #mainContainer {
 	display: grid;
@@ -11,6 +15,7 @@
 header {
 	grid-area: header;
 	border-bottom: 2px solid black;
+	background-color: #FF7A59;
 }
 main {
 	grid-area: main;
@@ -24,6 +29,7 @@ footer {
 	grid-area: footer;
 	display: flex;
 	justify-content: space-evenly;
+	background-color: #acacac;
 }
 
 
