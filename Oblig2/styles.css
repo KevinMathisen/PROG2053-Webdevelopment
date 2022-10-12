@@ -116,16 +116,9 @@ The element is also using relative sizes for width.*/
 	border: 3px solid black;
 	border-radius: 10px;
 	background-color: #FF7A59;
-	/*border: 1em solid 	#A0A0A0;
-	padding: 1%;
-	width: 40%;*/
 	text-align: center;
-	/*border-radius: 10px;
-	-moz-border-radius: 2%;
-	-webkit-border-radius: 3%;*/
 	padding-left:  2%;
 	padding-right: 2%;
-	/*margin-left: 0%;*/
 	float:left;
 	font-style: normal;
 	font-size:medium;
@@ -140,8 +133,6 @@ The element is also using relative sizes for width.*/
 	font-size: medium;
 	min-height: 1em;
 	max-width: 17.5em;
-	/*display: flex;*/
-	/*cursor: pointer;*/
 }
 
 #questions summary:hover{
