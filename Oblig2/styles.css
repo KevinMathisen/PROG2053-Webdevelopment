@@ -140,10 +140,11 @@ The element is also using relative sizes for width.*/
 	font-size: medium;
 	min-height: 1em;
 	max-width: 17.5em;
+	/*display: flex;*/
 	/*cursor: pointer;*/
 }
 
-#Q :hover{
+#questions summary:hover{
 	cursor: pointer;
 	background-color: #ec5f3c;
 }
