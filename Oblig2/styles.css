@@ -83,6 +83,7 @@ The element is also using relative sizes for width.*/
 }
 #primNav a:hover {
 	border: 2px solid red;
+	background-color: #3c3c3d;
 }
 
 #iconBackground {
@@ -263,7 +264,7 @@ main {
 #getTravel {
 	grid-area: getT;
 	cursor: pointer;
-	box-shadow: 0 4px #999;
+	box-shadow: 0 4px #F2F2F2;
 	border: 1px solid grey;
 	border-radius: 4px;
 	background-color: white;
