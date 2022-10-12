@@ -1,4 +1,8 @@
 
+body {
+	margin: 0px;
+}
+
 /*Implementation of task 3b, use CSS grid layout to create a responsive body with sidebars.*/
 #mainContainer {
 	display: grid;
@@ -11,6 +15,7 @@
 header {
 	grid-area: header;
 	border-bottom: 2px solid black;
+	background-color: #FF7A59;
 }
 main {
 	grid-area: main;
@@ -24,6 +29,7 @@ footer {
 	grid-area: footer;
 	display: flex;
 	justify-content: space-evenly;
+	background-color: #acacac;
 }
 
 
@@ -77,6 +83,7 @@ The element is also using relative sizes for width.*/
 }
 #primNav a:hover {
 	border: 2px solid red;
+	background-color: #3c3c3d;
 }
 
 #iconBackground {
@@ -258,7 +265,7 @@ main {
 #getTravel {
 	grid-area: getT;
 	cursor: pointer;
-	box-shadow: 0 4px #999;
+	box-shadow: 0 4px #F2F2F2;
 	border: 1px solid grey;
 	border-radius: 4px;
 	background-color: white;
