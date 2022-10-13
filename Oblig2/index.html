@@ -19,63 +19,102 @@
 </head>
 
 <body>
+	 <!-- Implementation of the task I.7.  Icons used in the website are included as SVG sprite. As seen in lecture week 37, slides 35-40 -->
+	<svg  xmlns="http://www.w3.org/2000/svg" display="none">
+
+		<symbol id="price_tag-icon">
+			<!--The price-tag icon was taken from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Alocal_offer%3A -->
+			<path d="M0 0h24v24H0z" fill="none"/>
+			<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
+		</symbol>
+
+		<symbol id ="about_us-icon">
+			<!--The about-us icon was taken from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Agroup%3A-->
+			<path d="M0 0h24v24H0z" fill="none"/>
+			<path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+		</symbol>
+
+		<symbol id ="news-icon">
+			<!--The news icon was taken from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Afeed%3A-->
+			<path d="M0,0h24v24H0V0z" fill="none"/>
+			<path d="M16,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V8L16,3z M7,7h5v2H7V7z M17,17H7v-2h10V17z M17,13H7v-2h10 V13z M15,9V5l4,4H15z"/>
+		</symbol>
+
+		<symbol id="support-icon">
+			<!--The support icon was taken from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Asupport_agent%3A-->
+			<path d="M21,12.22C21,6.73,16.74,3,12,3c-4.69,0-9,3.65-9,9.28C2.4,12.62,2,13.26,2,14v2c0,1.1,0.9,2,2,2h1v-6.1 c0-3.87,3.13-7,7-7s7,3.13,7,7V19h-8v2h8c1.1,0,2-0.9,2-2v-1.22c0.59-0.31,1-0.92,1-1.64v-2.3C22,13.14,21.59,12.53,21,12.22z"/>
+			<circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/>
+			<path d="M18,11.03C17.52,8.18,15.04,6,12.05,6c-3.03,0-6.29,2.51-6.03,6.45c2.47-1.01,4.33-3.21,4.86-5.89 C12.19,9.19,14.88,11,18,11.03z"/>
+		</symbol>
+
+		<symbol id ="up_arrow-icon">
+			<!--The up-arrow icon was taken from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Aarrow_upward%3A -->
+			<path d="M0 0h24v24H0V0z" fill="none"/>
+			<path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+		</symbol>
+		<!--The custom made train logo used in our website-->
+		<symbol id ="train-logo">
+			<g transform="matrix(1 0 0 1 29.86 49)"  >
+				<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  x1="0" y1="0" x2="0" y2="0" />
+				</g>
+				<g transform="matrix(0.15 0 0 1 50.93 74)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0.08 0 0 0.85 14.04 44.44)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0.08 0 0 0.85 41.47 44.87)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0.08 0 0 0.85 70.04 46.14)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0.08 0 0 0.87 95.18 45.95)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0 0.03 -0.27 0.01 28.43 23.02)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0 0.03 -0.27 0.01 26.79 45.24)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0 0.03 -0.29 0.01 82.24 24.13)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0 0.04 -0.21 0.01 83.18 45.48)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0 0.04 -0.2 0.01 82.17 67.06)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(1.12 0 0 0.12 55.23 11.87)"  >
+				<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(106,106,106); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(1.1 0 0 0.12 54.23 79)"  >
+				<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(116,116,116); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0.04 0 0 0.43 14.33 41.94)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0.03 0 0 0.43 40.46 43.22)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0.04 0 0 0.46 71.3 46.16)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+				<g transform="matrix(0.03 0 0 0.43 93.24 46.15)"  >
+				<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
+				</g>
+		</symbol>
+	</svg>
+	
 	<header>
 		<!--Implementation of task 4.b. Header contains primary navigation, a logo image (svg), and som text to describe the website.-->
 
 		<!--SVG Logo of the company-->
 		<div id="headerLogo">
-			<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
-					<g transform="matrix(1 0 0 1 29.86 49)"  >
-					<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  x1="0" y1="0" x2="0" y2="0" />
-					</g>
-					<g transform="matrix(0.15 0 0 1 50.93 74)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0.08 0 0 0.85 14.04 44.44)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0.08 0 0 0.85 41.47 44.87)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0.08 0 0 0.85 70.04 46.14)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0.08 0 0 0.87 95.18 45.95)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0 0.03 -0.27 0.01 28.43 23.02)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0 0.03 -0.27 0.01 26.79 45.24)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0 0.03 -0.29 0.01 82.24 24.13)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0 0.04 -0.21 0.01 83.18 45.48)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0 0.04 -0.2 0.01 82.17 67.06)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(1.12 0 0 0.12 55.23 11.87)"  >
-					<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(106,106,106); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(1.1 0 0 0.12 54.23 79)"  >
-					<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(116,116,116); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0.04 0 0 0.43 14.33 41.94)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0.03 0 0 0.43 40.46 43.22)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0.04 0 0 0.46 71.3 46.16)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
-					<g transform="matrix(0.03 0 0 0.43 93.24 46.15)"  >
-					<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-					</g>
+			<svg>
+				<use xlink:href="#train-logo" />
 			</svg>
 		</div>
 
@@ -91,32 +130,44 @@
 
 		<!--Primary navigation to other pages on the website-->
 		<nav id="primNav">
+			<!--Prices button-->
 			<a href ="">
-				<div id="iconBackground">
-					<!--The price-tag icon was downloaded from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Alocal_offer%3A -->
-					<img id ="iconSize" src = "images/prices-icon.svg"></img>
+				<div class="iconBackground">
+					<!--Calling icon for Prices that we defined as a symbol below the <body>-->
+					<svg class="iconSize">
+						<use xlink:href="#price_tag-icon" />
+					</svg>
 				</div>
 				<span>Prices</span>
 			</a>
+			<!--About us button-->
 			<a href="">
-				<div id ="iconBackground">
-					<!--The about-us icon was downloaded from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Agroup%3A-->
-					<img id ="iconSize" src= "images/about-us-icon.svg"></img>
+				<div class ="iconBackground">
+					<!--Calling icon for About us that we defined as a symbol below the <body>-->
+					<svg class="iconSize">
+						<use xlink:href="#about_us-icon" />
+					</svg>
 				</div>
 				<span>About us</span>
 			</a>
+			<!--News button-->
 			<a href="">
-				<div id = "iconBackground">
-					<!--The news icon was downloaded from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Afeed%3A-->
-					<img id = "iconSize" src = "images/news-icon.svg"></img>
+				<div class = "iconBackground">
+					<!--Calling icon for News that we defined as a symbol below the <body>-->
+					<svg class="iconSize">
+						<use xlink:href="#news-icon" />
+					</svg>
 				</div>
 				<span>News</span>
 				
 			</a>
+			<!--Support button-->
 			<a href="">
-				<div id = "iconBackground">
-					<!--The support icon was downloaded from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Asupport_agent%3A -->
-					<img id = "iconSize" src = "images/support-icon.svg"></img>
+				<div class = "iconBackground">
+					<!--Calling icon for Support that we defined as a symbol below the <body>-->
+					<svg class="iconSize">
+						<use xlink:href="#support-icon" />
+					</svg>
 				</div>
 				<span>Support</span>
 				
@@ -255,9 +306,11 @@
 		<!--Uses relative link to let user jump around on the webpage, as seen in slide 48, lecture week 34.-->
 		<section id="jumpToTop">
 		<a href="#">
-			<div id = "iconBackground">
-				<!--The support icon was downloaded from the following website: https://fonts.google.com/icons?selected=Material%20Icons%3Aarrow_upward%3A -->
-				<img id = "iconSize" src = "images/up_arrow-icon.svg"></img>
+			<div class = "iconBackground">
+				<!--Calling icon for up-arrow that we defined as a symbol below the <body>-->
+				<svg class="iconSize">
+					<use xlink:href="#up_arrow-icon" />
+				</svg>
 			</div>
 			<span>Back to Top</span>
 		</a>
@@ -270,58 +323,8 @@
 	<footer>
 
 		<!--SVG Logo of the company-->
-		<svg width="150" viewBox="0 0 120 100" xml:space="preserve">
-			<g transform="matrix(1 0 0 1 29.86 49)"  >
-			<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  x1="0" y1="0" x2="0" y2="0" />
-			</g>
-			<g transform="matrix(0.15 0 0 1 50.93 74)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0.08 0 0 0.85 14.04 44.44)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0.08 0 0 0.85 41.47 44.87)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0.08 0 0 0.85 70.04 46.14)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0.08 0 0 0.87 95.18 45.95)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(134,69,5); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0 0.03 -0.27 0.01 28.43 23.02)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0 0.03 -0.27 0.01 26.79 45.24)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0 0.03 -0.29 0.01 82.24 24.13)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0 0.04 -0.21 0.01 83.18 45.48)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0 0.04 -0.2 0.01 82.17 67.06)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(1.12 0 0 0.12 55.23 11.87)"  >
-			<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(106,106,106); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(1.1 0 0 0.12 54.23 79)"  >
-			<polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(116,116,116); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0.04 0 0 0.43 14.33 41.94)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0.03 0 0 0.43 40.46 43.22)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 8; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0.04 0 0 0.46 71.3 46.16)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
-			<g transform="matrix(0.03 0 0 0.43 93.24 46.15)"  >
-			<polygon style="stroke: rgb(134,69,5); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(51, 26, 0); fill-rule: nonzero; opacity: 1;"  points="-50,-50 -50,50 50,50 50,-50 " />
-			</g>
+		<svg id="headerlogo">
+			<use xlink:href="#train-logo" />
 		</svg>
 
 		<!--Implementation of tasks 4.g, Contact information of the website. Uses <address> as recommended on slide 37, lecture week 34-->
