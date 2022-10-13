@@ -50,6 +50,8 @@ header {
 }
 #headerLogo {
 	grid-area: logo;
+	width:120px;
+	height: 100px;
 }
 #headerTitle {
 	grid-area: title;
