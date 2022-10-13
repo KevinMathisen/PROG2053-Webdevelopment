@@ -78,13 +78,15 @@ header {
 /*Implementation of task 3a and b. The element is using flexbox to evenly and responsivly space the navigation links.
 The element is also using relative sizes for width.*/
 #primNav {
-	margin: 1em;
+	padding: 1em;
+	box-sizing: border-box;
 	margin-top: 2em;
 	margin-bottom: 2em;
 	grid-area: nav;
 	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 /*Decorating all the a elements in the element that has the primNav id attribute. It is decorated as a button.*/
 #primNav a {
