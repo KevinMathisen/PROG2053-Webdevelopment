@@ -87,8 +87,8 @@ The element is also using relative sizes for width.*/
 	border: 2px solid red;
 	background-color: #3c3c3d;
 }
-/*Decorate the background of an icon. This is for task 7*/
-#iconBackground {
+/*Decorate the background of an icon. This is for task I.7*/
+.iconBackground {
 	width: 24px;
 	height: 24px;
 	border-radius: 100%;
@@ -98,8 +98,8 @@ The element is also using relative sizes for width.*/
 	border-color: red;
 	background-color: #FF7A59;
 }
-/*Default width and height size for all icons used in our website. This is for task 7*/
-#iconSize {
+/*Default width and height size for all icons used in our website. This is for task I.7*/
+.iconSize {
 	width:24px;
 	height:24px;
 }
