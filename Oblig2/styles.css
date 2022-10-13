@@ -50,6 +50,11 @@ p, summary{
 	/*font-family: Arial, Helvetica, sans-serif, Times, serif;*/
 }
 
+legend, label, option, button{
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 0.9em;
+}
+
 /*Implementation of task 3b, use CSS grid layout to create a responsive header.*/
 header {
 	display: grid;
