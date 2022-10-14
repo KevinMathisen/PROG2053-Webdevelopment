@@ -158,7 +158,6 @@ The element is also using relative sizes for width.*/
 #questions {
 	border: 5px solid black;
 	padding: 1em;
-	/*border-spacing: 1em;   OBS, hva gjør denne??? ingen forskjell uten, tror jeg.*/
 	border-radius: 10px;
 	background-color: #FF7A59;
 	min-height: 1em;
