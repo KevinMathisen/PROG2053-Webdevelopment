@@ -86,6 +86,7 @@ The element is also using relative sizes for width.*/
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
+	gap: 30px;
 }
 /*Decorating all the a elements in the element that has the primNav id attribute. It is decorated as a button.*/
 #primNav a {
