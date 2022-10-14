@@ -33,34 +33,26 @@ footer {
 }
 
 
-/*Implementation of task 4. Use font 'source sans pro' if available on all headers on the website.*/
+/*Implementation of task 4. Use font 'source sans pro' if available on all headers on the website. Make use of the 'sixteen pixel scale' from page
+  276 in the syllabus book, to scale the diffrent elements on the website.*/
 h1,h2{
 font-family: 'Source Sans Pro', sans-serif;
-font-size: 1.8em;
+font-size: 2em;
 }
 
+/*Implementation for task 4. Using website "www.fontsqurrel.com" to download and use font, shown in page 277 from syllabus book, I use 'Open Sans' 
+  which is a font type avaleble on that bevsite.*/
 @font-face {
 	font-family: 'Open Sans';
-	src: url('fonts/OpenSans-Regular.ttf');
+	src: url('fonts/static/OpenSans/OpenSans-Regular.ttf');
 }
 
-p, summary{
+/*Implementation for task 4. Using the format found in lecture slide 44 - 45 from week 36 and page 277 from the syllabus book, also using page 276 
+  in the syllabus book (font size) and slide 47 - 48 in lecture slides from week 36.*/
+p, summary, span, legend, label, option, button{
 	font-family: system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 1em;
-	/*font-family: Arial, Helvetica, sans-serif, Times, serif;*/
 }
-
-legend, label, option, button{
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 0.9em;
-}
-
-
-span{
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 1em;
-}
-
 
 /*Implementation of task 3b, use CSS grid layout to create a responsive header.*/
 header {
@@ -129,13 +121,23 @@ The element is also using relative sizes for width.*/
 	height:24px;
 }
 
+/*Implementation for task 3a. Using implementation of float with inline-start to make the "content" start at the "right" 
+  place to make everything align togather with the other omplementations. Relative position from syllabus book page 366. 
+  Max width from slide 59 - 61 in week 36 and page 304 in syllabus book. This things were added to make it easier for 
+  the user to see the content and reed it.*/
 #content{
-	float:inline-start;
+	float: inline-start;
 	position: relative;
 	max-width: 50em;
 }
 
-/*Implementation of task 3b, use Css grid layout to create a responsive main.*/
+
+/*Implementation of task 3b, use Css grid layout to create a responsive main. Using (text-align) from slide 
+  53 from week 36. Using page 313 in syllabus book for use of (padding) variable. Using page 310 in syllabus book
+  for implementation of a solid black border. Use page 322 for border radius from the syllabus book. Implementing 
+  background color form syllabus book (250) and set it to a hex value to match the website theme. have also 
+  implemented floating to left to make tile aside stay on the left side. All these are needed to make the aside 
+  suteble for the website and to make the user want to read it.*/
 #funFact {
 	border: 3px solid black;
 	border-radius: 10px;
@@ -146,22 +148,31 @@ The element is also using relative sizes for width.*/
 	float:left;
 }
 
+/*Implementation for task 3a Make use of variables like min- and max-width and hight as shown from slide 59 - 61 in lecture slide 
+  week 36 and form page 304 and 305 in the syllabus book. Setting min hight to make the box stay in a nice "standard" size which 
+  could expand later, and a max to be consistant. Altso a theme related bacground and border making the implementation more visible 
+  for the user and rounded corners to make the implementation more welcomming for the user.*/
 #questions {
 	border: 5px solid black;
 	padding: 1em;
-	border-spacing: 1em;
+	/*border-spacing: 1em;   OBS, hva gjør denne??? ingen forskjell uten, tror jeg.*/
 	border-radius: 10px;
 	background-color: #FF7A59;
 	min-height: 1em;
 	max-width: 17.5em;
 }
 
+/*Implementation for task 6. Using page 347 from syllabus book for implementation of cursor style. Implementing background color form 
+  syllabus book (250) and set as a hex value to be a bit diffrent from the bacground when hovering over with the pointing cursor so 
+  that the user knows that the implementation is interacteble. This is to implement pseud (interaction) to the website.*/
 #questions summary:hover{
 	cursor: pointer;
 	background-color: #ec5f3c;
 }
 
-
+/*Implementation for task 3a and 3b. Using margin found on page 314 in the syllabus book to make the button the way we wanted and 
+  using vertical align from slide 53 from week 36 on the content inside the button to align text with icon and also use of flexbox 
+  to align the elements in the implementation. Also justify-content added to senter the button.*/
 #jumpToTop{
 	margin: 1em;
 	margin-top: 2em;
@@ -172,6 +183,8 @@ The element is also using relative sizes for width.*/
 	width: 100%;
 }
 
+/*Implementation for task 3a and 6. Use page 322 from syllabus book for border radius. Setting the font decoration til 'none' to
+  get rid of the underline as shown in page 282 from the syllabus book. This is used to make the button that the user would use.*/
 #jumpToTop a{
 	color: black;
 	text-decoration: none;
@@ -186,6 +199,7 @@ The element is also using relative sizes for width.*/
 	display: flex;
 }
 
+/*Implementation for task 6 for designing a button with pseudo style and changes color when hovering over.*/
 #jumpToTop :hover{
 	background-color: #b1adac;
 }
@@ -235,6 +249,7 @@ main {
 	float: right;
 }
 
+/*Using page 347 from syllabus book for implementation of cursor style for task 6.*/
 #textForIframe abbr{
 	cursor: help;
 }
