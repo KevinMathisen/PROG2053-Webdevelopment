@@ -210,6 +210,7 @@ main {
 	display: grid;
 	grid-template:
 		"forms" auto
+		"list" auto
 		"article" auto
 		"figure" auto
 		"iframe" auto
@@ -221,6 +222,13 @@ main {
 }
 #orderTrainTicket {
 	grid-area: forms;
+}
+#ticketsList {
+	grid-area: list;
+	margin: 1em;
+	border-radius: 8px;
+	border: 3px solid black;
+	padding:10px;
 }
 #pictureTrain {
 	grid-area: figure;
@@ -267,6 +275,7 @@ main {
 /*Implementation of task 3b, use CSS grid layout to create a responsive form.*/
 #formContainer {
 	margin-top: 1em;
+	margin-bottom: 1em;
 	display: grid;
 	grid-template: 
 		"depS desS" 2em
@@ -292,7 +301,6 @@ main {
 #nTDiv {
 	grid-area: nT;
 }
-
 #getTravel {
 	grid-area: getT;
 	cursor: pointer;
@@ -300,6 +308,14 @@ main {
 	border: 1px solid grey;
 	border-radius: 4px;
 	background-color: white;
+}
+#submitInfo {
+	display: none;
+	background-color: #ffe761;
+	border-radius: 8px;
+	padding: 2px;
+	font-size: 16px;
+
 }
 
 /*Implementation of task 6. Use pseudo to make the form interactive, by showing the user which element they have focused, as seen in lecture week 37, slide 17.
@@ -348,6 +364,7 @@ The default design is optimised for mobile devices, and the design for landscape
 	main {
 		grid-template:
 			"forms forms forms forms" auto
+			"list list list list" auto
 			"article article article figure" auto
 			"iframe iframe faq faq" auto
 			". jumpToTop jumpToTop ." auto
