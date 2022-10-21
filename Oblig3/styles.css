@@ -1,0 +1,368 @@
+
+body {
+	margin: 0px;
+}
+
+/*Implementation of task 3b, use CSS grid layout to create a responsive body with sidebars.*/
+#mainContainer {
+	display: grid;
+	grid-template: 
+		"header header header" auto
+		". main . " auto
+		"footer footer footer" auto
+		/ 20px auto 20px;
+}
+header {
+	grid-area: header;
+	border-bottom: 2px solid black;
+	background-color: #FF7A59;
+}
+main {
+	grid-area: main;
+	background-color: #F2F2F2;
+	box-shadow: 0 0 0 100vmax #F2F2F2;
+	clip-path: inset(0 -100vmax); 		
+}
+footer {
+	border-top: 2px solid black;
+	padding-top: 1em;
+	grid-area: footer;
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #acacac;
+}
+
+
+/*Implementation of task 4. Use font 'source sans pro' if available on all headers on the website. Make use of the 'sixteen pixel scale' from page
+  276 in the syllabus book, to scale the diffrent elements on the website.*/
+h1,h2{
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 2em;
+}
+
+/*Implementation for task 4. Using website "www.fontsqurrel.com" to download and use font, shown in page 277 from syllabus book, I use 'Open Sans' 
+  which is a font type avaleble on that bevsite.*/
+@font-face {
+	font-family: 'Open Sans';
+	src: url('fonts/static/OpenSans/OpenSans-Regular.ttf');
+}
+
+/*Implementation for task 4. Using the format found in lecture slide 44 - 45 from week 36 and page 277 from the syllabus book, also using page 276 
+  in the syllabus book (font size) and slide 47 - 48 in lecture slides from week 36.*/
+p, summary, span, legend, label, option, button{
+	font-family: system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1em;
+}
+
+/*Implementation of task 3b, use CSS grid layout to create a responsive header.*/
+header {
+	display: grid;
+	grid-template: 
+		"logo title" auto
+		"logo desc" auto
+		"nav nav" auto
+		/ 1fr 2fr;
+}
+#headerLogo {
+	grid-area: logo;
+	width:120px;
+	height: 100px;
+}
+#headerTitle {
+	grid-area: title;
+}
+#headerDesc {
+	grid-area: desc;
+}
+/*Implementation of task 3a and b. The element is using flexbox to evenly and responsivly space the navigation links.
+The element is also using relative sizes for width.*/
+#primNav {
+	padding: 1em;
+	box-sizing: border-box;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	grid-area: nav;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+/*Decorating all the a elements in the element that has the primNav id attribute. It is decorated as a button.*/
+#primNav a {
+	color:white;
+	text-decoration: none;
+	font-weight: normal;
+	border-radius: 5px;
+	padding:10px;
+	width:6.5em;
+	background-color: #828282;
+	border: 2px solid black;
+	align-items: center;
+	display: flex;
+	
+}
+/*Change the border color and background color of the a element inside an element with the primNav id attribute.*/
+#primNav a:hover {
+	border: 2px solid red;
+	background-color: #3c3c3d;
+}
+/*Decorate the background of an icon. This is for task I.7*/
+.iconBackground {
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	display: inline-block;
+	margin-right: 0.5625rem;
+	padding: 3px;
+	border-color: red;
+	background-color: #FF7A59;
+}
+/*Default width and height size for all icons used in our website. This is for task I.7*/
+.iconSize {
+	width:24px;
+	height:24px;
+}
+
+/*Implementation for task 3a. Using implementation of float with inline-start to make the "content" start at the "right" 
+  place to make everything align togather with the other omplementations. Relative position from syllabus book page 366. 
+  Max width from slide 59 - 61 in week 36 and page 304 in syllabus book. This things were added to make it easier for 
+  the user to see the content and reed it.*/
+#content{
+	float: inline-start;
+	position: relative;
+	max-width: 50em;
+}
+
+
+/*Implementation of task 3b, use Css grid layout to create a responsive main. Using (text-align) from slide 
+  53 from week 36. Using page 313 in syllabus book for use of (padding) variable. Using page 310 in syllabus book
+  for implementation of a solid black border. Use page 322 for border radius from the syllabus book. Implementing 
+  background color form syllabus book (250) and set it to a hex value to match the website theme. have also 
+  implemented floating to left to make tile aside stay on the left side. All these are needed to make the aside 
+  suteble for the website and to make the user want to read it.*/
+#funFact {
+	border: 3px solid black;
+	border-radius: 10px;
+	background-color: #FF7A59;
+	text-align: center;
+	padding-left:  2%;
+	padding-right: 2%;
+	float:left;
+}
+
+/*Implementation for task 3a Make use of variables like min- and max-width and hight as shown from slide 59 - 61 in lecture slide 
+  week 36 and form page 304 and 305 in the syllabus book. Setting min hight to make the box stay in a nice "standard" size which 
+  could expand later, and a max to be consistant. Altso a theme related bacground and border making the implementation more visible 
+  for the user and rounded corners to make the implementation more welcomming for the user.*/
+#questions {
+	border: 5px solid black;
+	padding: 1em;
+	border-radius: 10px;
+	background-color: #FF7A59;
+	min-height: 1em;
+	max-width: 17.5em;
+}
+
+/*Implementation for task 6. Using page 347 from syllabus book for implementation of cursor style. Implementing background color form 
+  syllabus book (250) and set as a hex value to be a bit diffrent from the bacground when hovering over with the pointing cursor so 
+  that the user knows that the implementation is interacteble. This is to implement pseud (interaction) to the website.*/
+#questions summary:hover{
+	cursor: pointer;
+	background-color: #ec5f3c;
+}
+
+/*Implementation for task 3a and 3b. Using margin found on page 314 in the syllabus book to make the button the way we wanted and 
+  using vertical align from slide 53 from week 36 on the content inside the button to align text with icon and also use of flexbox 
+  to align the elements in the implementation. Also justify-content added to senter the button.*/
+#jumpToTop{
+	margin: 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	display: flex;
+	vertical-align: middle;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+/*Implementation for task 3a and 6. Use page 322 from syllabus book for border radius. Setting the font decoration til 'none' to
+  get rid of the underline as shown in page 282 from the syllabus book. This is used to make the button that the user would use.*/
+#jumpToTop a{
+	color: black;
+	text-decoration: none;
+	font-weight: normal;
+	border-radius: 8px;
+	border: 3px solid black;
+	padding:5px;
+	width:8em;
+	background-color: #FF7A59;
+	border: 2px solid black;
+	align-items: center;
+	display: flex;
+}
+
+/*Implementation for task 6 for designing a button with pseudo style and changes color when hovering over.*/
+#jumpToTop :hover{
+	background-color: #b1adac;
+}
+
+main {
+	display: grid;
+	grid-template:
+		"forms" auto
+		"article" auto
+		"figure" auto
+		"iframe" auto
+		"faq" auto
+		"jumpToTop" auto
+		/ 1fr;
+	gap: 20px;
+	justify-items: center;
+}
+#orderTrainTicket {
+	grid-area: forms;
+}
+#pictureTrain {
+	grid-area: figure;
+	min-width: 100px;
+}
+#ourService {
+	grid-area: article;
+	margin: 1em;
+}
+#content {
+	grid-area: article;
+	margin: 1em;
+	margin-top: 0px;
+}
+#iframeMaps {
+	grid-area: iframe;
+	margin: 1em;
+}
+#questions {
+	grid-area: faq;
+	margin: 1em;
+}
+#jumpToTop {
+	grid-area: jumpToTop;
+}
+
+#textForIframe {
+	float: right;
+}
+
+/*Using page 347 from syllabus book for implementation of cursor style for task 6.*/
+#textForIframe abbr{
+	cursor: help;
+}
+
+#orderTrainTicket {
+	margin-top: 2em;
+}
+#orderTrainTicket > * {
+	font-size: 20px;
+}
+
+
+/*Implementation of task 3b, use CSS grid layout to create a responsive form.*/
+#formContainer {
+	margin-top: 1em;
+	display: grid;
+	grid-template: 
+		"depS desS" 2em
+		"date time" 2em
+		"nT nT" 2em
+		"getT getT" 2em
+		/ 1fr 1fr;
+	justify-items: center;
+	gap: 1em;
+}
+#depSDiv {
+	grid-area: depS;
+}
+#desSDiv {
+	grid-area: desS;
+}
+#dateDiv {
+	grid-area: date;
+}
+#timeDiv {
+	grid-area: time;
+}
+#nTDiv {
+	grid-area: nT;
+}
+
+#getTravel {
+	grid-area: getT;
+	cursor: pointer;
+	box-shadow: 0 4px #F2F2F2;
+	border: 1px solid grey;
+	border-radius: 4px;
+	background-color: white;
+}
+
+/*Implementation of task 6. Use pseudo to make the form interactive, by showing the user which element they have focused, as seen in lecture week 37, slide 17.
+Also style submit button to imitate a physical button, as seen in lecture week 37, slide 21.*/
+#getTravel:hover {
+	background-color: #d8d8d8;
+	border: 1px solid grey;
+	border-radius: 4px;
+}
+#getTravel:active {
+	box-shadow: 0px 2px #999;
+	border:none;
+	border-radius: 4px;
+}
+#departStation:focus {
+	background-color: #e2e2e2;
+}
+#destinationStation:focus {
+	background-color: #e2e2e2;
+}
+#date:focus {
+	background-color: #e2e2e2;
+}
+#time:focus {
+	background-color: #e2e2e2;
+}
+#numTravelers:focus {
+	background-color: #e2e2e2;
+}
+
+
+
+
+
+/*Implementation of task 5. Uses media queriess to get a mobile first responsive design. As seen in lecture week 38, slide 106-112.
+The default design is optimised for mobile devices, and the design for landscape mode is only loaded if needed, saving resources for mobile devices.*/
+@media (min-width: 45em) {
+	#mainContainer {
+		grid-template: 
+			"header header header" auto
+			". main . " auto
+			"footer footer footer" auto
+			/ 40px auto 40px;
+	}
+
+	main {
+		grid-template:
+			"forms forms forms forms" auto
+			"article article article figure" auto
+			"iframe iframe faq faq" auto
+			". jumpToTop jumpToTop ." auto
+			/ 2fr 1fr 1fr 2fr;
+	}
+
+	#formContainer {
+		margin-top: 1em;
+		display: grid;
+		grid-template: 
+			"depS depS desS desS" 2em
+			"date time time nT" 2em
+			". getT getT ." 2em
+			/ 2fr 1fr 1fr 2fr;
+		justify-items: center;
+		gap: 1em;
+	}
+}
