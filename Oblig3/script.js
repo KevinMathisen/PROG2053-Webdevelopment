@@ -12,7 +12,8 @@ let submitInfoEl = document.querySelector("#submitInfo");
 //  Create a date with current time.
 let curDate = new Date();
 
-
+//get the ticketList element
+let elTicketList = document.getElementById('ticketsList'); 
 
 
 
@@ -30,8 +31,8 @@ dateEl.addEventListener('blur', (e) => e.target.reportValidity());
 timeEl.addEventListener('blur', (e) => e.target.reportValidity());
 numTravEl.addEventListener('blur', (e) => e.target.reportValidity());
 
-
-
+//Add eventlistener for clicks in the ticketList element
+elTicketList.addEventListener('click', deleteTicket); 
 
 
 
@@ -73,3 +74,21 @@ function submitForm(e) {
 		//  Display object to page
 	}
 }
+
+
+
+//Function that deletes tickets from a list. The function deletes only if the clicked element is "a" element and if that element's parent is a "li" element
+function deleteTicket(e) {
+	// Prevent the link from taking you elsewhere
+	e.preventDefault(); 
+
+	// If user clicked on an a element and if it's parent is a li element
+	if (e.target.nodeName.toLowerCase() == "a" && e.target.parentNode.nodeName.toLowerCase() == "li") { 
+		//Removing the element's parentnode, which is a li element, and deleting it
+		e.target.parentNode.remove(); 
+		
+		//Remove the object if its in a list
+	}
+
+   } 
+
