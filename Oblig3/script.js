@@ -1,3 +1,25 @@
+//The train object "const - litt usikker på om det skal være en 'const' her eller om det skal være 'var'"
+const train{
+	departStationEl: "Choose station",
+	destStation: "Choose station",
+	date: " ",
+	departTime: " ",
+	numTrav: "1"
+};
+
+console.log("halla");
+
+//train.departStationEl
+
+//Function to get the total travle price
+//GetPrice(){
+
+//}
+
+//Function to get the date and time of travel
+//GetDateAndTime(){
+
+//}
 
 
 //  Get all form elements.
