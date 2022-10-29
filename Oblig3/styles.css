@@ -228,7 +228,13 @@ main {
 	margin: 1em;
 	border-radius: 8px;
 	border: 3px solid black;
-	padding:10px;
+	padding:1em;
+}
+#ticketsList>h2 {
+	text-align: center;
+}
+#ticketsList>ul {
+	padding-right: 1em;
 }
 #pictureTrain {
 	grid-area: figure;
