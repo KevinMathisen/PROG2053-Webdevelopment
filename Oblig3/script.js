@@ -1,11 +1,4 @@
-//The train object "const - litt usikker på om det skal være en 'const' her eller om det skal være 'var'"
-const train{
-	departStationEl: "Choose station",
-	destStation: "Choose station",
-	date: " ",
-	departTime: " ",
-	numTrav: "1"
-};
+
 
 console.log("halla");
 
@@ -36,7 +29,7 @@ let curDate = new Date();
 
 //get the ticketList element
 let elTicketList = document.getElementById('ticketsList'); 
-
+let ulElement = document.querySelector("ul");
 
 
 
@@ -113,4 +106,14 @@ function deleteTicket(e) {
 	}
 
    } 
+
+
+
+//  Function that takes ticket object and displays it on the page
+function displayTicket(ticket) {
+	let dateString = `${ticket.date.prototype.getMinutes}:${ticket.date.prototype.getHours} ${ticket.date.prototype.getDate}.${ticket.date.prototype.getMonth+1}.${ticket.date.prototype.getFullYear}`; 
+	let string = `${ticket.depStation} til ${ticket.destStation} ${dateString}, ${ticket.getPrice()}kr, ${ticket.numTrav} personer`; 
+	ulElement
+	ulElement.innerHTML += `<li>${string}<li>`;
+}
 
