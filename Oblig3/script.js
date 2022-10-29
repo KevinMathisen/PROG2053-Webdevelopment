@@ -1,18 +1,17 @@
-
-
+//  Testing if script loaded:
 console.log("halla");
 
-//train.departStationEl
 
-//Function to get the total travle price
-//GetPrice(){
+//  Possible ticket constructor:
+function Ticket(depStation, destStation, date, numTrav) {
+	this.depStation = depStation;
+	this.destStation = destStation;
+	this.date = date;
+	this.numTrav = numTrav;
 
-//}
-
-//Function to get the date and time of travel
-//GetDateAndTime(){
-
-//}
+	//  Function to get price of train ticket:
+	this.getPrice = function() { return 100*numTrav;	}
+}
 
 
 //  Get all form elements.
@@ -24,13 +23,14 @@ let timeEl = document.querySelector("#time");
 let numTravEl = document.querySelector("#numTravelers"); 
 let submitInfoEl = document.querySelector("#submitInfo");
 
+
 //  Create a date with current time.
 let curDate = new Date();
+
 
 //get the ticketList element
 let elTicketList = document.getElementById('ticketsList'); 
 let ulElement = document.querySelector("ul");
-
 
 
 
@@ -50,9 +50,15 @@ numTravEl.addEventListener('blur', (e) => e.target.reportValidity());
 elTicketList.addEventListener('click', deleteTicket); 
 
 
-
-
-
+//  Creates array with tickets:
+let tickets = [];
+tickets.push(new Ticket("Oslo", "Bergen", new Date(2022, 9, 31, 12, 15, 0), 2));
+tickets.push(new Ticket("Trondheim", "Gjøvik", new Date(2023, 1, 5, 15, 0, 0), 1));
+tickets.push(new Ticket("Bergen", "Trondheim", new Date(2022, 11, 10, 10, 45, 0), 4));
+//  Displays all hardcoded tickets:
+for (const ticket of tickets) {
+	displayTicket(ticket);
+}
 
 
 //  Function which checks if form has valid input 
@@ -86,7 +92,12 @@ function submitForm(e) {
 		submitInfoEl.textContent = "";
 
 		//  Create object using arguments
+		let newTicket = new Ticket(depStation, destStation, ticketDate, numTrav);
+		//  Save object to array
+		tickets.push(newTicket);
+
 		//  Display object to page
+		displayTicket(newTicket);
 	}
 }
 
@@ -111,9 +122,12 @@ function deleteTicket(e) {
 
 //  Function that takes ticket object and displays it on the page
 function displayTicket(ticket) {
-	let dateString = `${ticket.date.prototype.getMinutes}:${ticket.date.prototype.getHours} ${ticket.date.prototype.getDate}.${ticket.date.prototype.getMonth+1}.${ticket.date.prototype.getFullYear}`; 
-	let string = `${ticket.depStation} til ${ticket.destStation} ${dateString}, ${ticket.getPrice()}kr, ${ticket.numTrav} personer`; 
-	ulElement
-	ulElement.innerHTML += `<li>${string}<li>`;
+	//  Creates a string which displays time and date of ticket:
+	let dateString = `${ticket.date.getHours()}:${ticket.date.getMinutes()} ${ticket.date.getDate()}.${ticket.date.getMonth()+1}.${ticket.date.getFullYear()}`; 
+	//  Create string which displays all information of ticket object provided:
+	let string = `${ticket.depStation} til ${ticket.destStation} kl. ${dateString}, ${ticket.getPrice()}kr, ${ticket.numTrav} personer`; 
+	
+	//  Add the ticket information to ticketlist on site, and add a button to delete entry if wanted.  
+	ulElement.innerHTML += `<li>${string} <button>Delete</button></li>`;
 }
 
