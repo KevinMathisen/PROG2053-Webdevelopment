@@ -103,20 +103,25 @@ function submitForm(e) {
 
 
 
-//Function that deletes tickets from a list. The function deletes only if the clicked element is "a" element and if that element's parent is a "li" element
+//Function that deletes tickets from a list. The function deletes only if the clicked element's grandparent is "button", and great grandparent is "li". 
 function deleteTicket(e) {
-	// Prevent the link from taking you elsewhere
-	e.preventDefault(); 
+	
+	//If user clicked on an element with "button" as its grandparent, and "li" as its great grandparent. 
+	//Due to using dlete icons, the clicked node would be "use" and parent node would be "svg", thus we look at the grandparent and great grandparent for the important elements
+	//This is to make sure the clicked item in the list is the delete button and that it has a li element that we can remove.
+	if (e.target.parentNode.parentNode.nodeName.toLowerCase() == "button" && e.target.parentNode.parentNode.parentNode.nodeName.toLowerCase() == "li") { 
 
-	// If user clicked on an a element and if it's parent is a li element
-	if (e.target.nodeName.toLowerCase() == "a" && e.target.parentNode.nodeName.toLowerCase() == "li") { 
-		//Removing the element's parentnode, which is a li element, and deleting it
-		e.target.parentNode.remove(); 
-		
-		//Remove the object if its in a list
+		//Creating a confirmation dialog to confirm the user's actions to delete a ticket
+		let confirmDeletingTicket = confirm(`Are you sure you want to delete the following ticket? 
+		${e.target.parentNode.parentNode.previousSibling.nodeValue}`)
+
+		//If the user confirmed the dialog
+		if (confirmDeletingTicket) {
+			//Removing the element's great grandparent, which is a li element, and deleting it
+			e.target.parentNode.parentNode.parentNode.remove(); 
+		}
 	}
-
-   } 
+} 
 
 
 
@@ -126,8 +131,14 @@ function displayTicket(ticket) {
 	let dateString = `${ticket.date.getHours()}:${ticket.date.getMinutes()} ${ticket.date.getDate()}.${ticket.date.getMonth()+1}.${ticket.date.getFullYear()}`; 
 	//  Create string which displays all information of ticket object provided:
 	let string = `${ticket.depStation} til ${ticket.destStation} kl. ${dateString}, ${ticket.getPrice()}kr, ${ticket.numTrav} personer`; 
-	
 	//  Add the ticket information to ticketlist on site, and add a button to delete entry if wanted.  
-	ulElement.innerHTML += `<li>${string} <button>Delete</button></li>`;
+	ulElement.innerHTML += `
+	<li>${string} 
+		<button id="deleteButton">
+			<svg height ="20px" width ="20px">
+				<use xlink:href="#delete-icon"/>
+			</svg>
+		</button>
+	</li>`;
 }
 
