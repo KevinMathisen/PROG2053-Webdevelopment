@@ -1,13 +1,28 @@
 //The train object "const - litt usikker på om det skal være en 'const' her eller om det skal være 'var'"
-const train{
+function ticket(departStationEl, destStation, date, departTime, numTrav){
+	this.departStationEl = departStationEl;
+	this.destStation = destStation;
+	this.date = date;
+	this.departTime = departTime;
+	this.numTrav = numTrav;
+
+	this.getPrice = function() { return this.numTrav* 100;}
+}
+
+/*
+let ticket{
+	//Properties
 	departStationEl: "Choose station",
 	destStation: "Choose station",
 	date: " ",
 	departTime: " ",
-	numTrav: "1"
+	numTrav: "1",
+	
+	//Method
+	//Function to sum up the total cost of the train trip after the amount of travlers on the ticket.
+	function GetPrice() { 100*numTrav;} 
 };
-
-console.log("halla");
+*/
 
 //train.departStationEl
 
@@ -16,10 +31,6 @@ console.log("halla");
 
 //}
 
-//Function to get the date and time of travel
-//GetDateAndTime(){
-
-//}
 
 
 //  Get all form elements.
