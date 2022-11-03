@@ -1,6 +1,6 @@
 // Implementaiton of task II.1.a and .b
 // The train object set as a function so that the same object could be used multiple times as the variables gets 
-//   updated. This function object contains four parameters to make multiple specific objects.
+// updated. This function object contains four parameters to make multiple specific objects. //Legg til sidetall. 
 function Ticket(depStation, destStation, date, numTrav){
 	this.depStation = depStation;
 	this.destStation = destStation;
@@ -10,9 +10,6 @@ function Ticket(depStation, destStation, date, numTrav){
 	//Gets the total price of the ticet baced on the amount of passangers.
 	this.getPrice = function() { return 100*this.numTrav;}
 }
-
-//  Testing if script loaded:
-console.log("Script Loaded.");
 
 
 //  Get all form elements.
@@ -76,8 +73,6 @@ function submitForm(e) {
 	//  Convert date and time input into a date object.
 	let ticketDate = new Date(dateEl.value + " " + timeEl.value);
 
-	console.log(depStation + " " + destStation);
-
 	if (!e.target.reportValidity()) {			//  Informs user if form not valid:
 		submitInfoEl.style.display = "inline";
 		submitInfoEl.textContent = "Form is not valid!"; 
@@ -95,8 +90,6 @@ function submitForm(e) {
 
 		//  Create object using arguments
 		let newTicket = new Ticket(depStation, destStation, ticketDate, numTrav);
-		//  Save object to array
-		tickets.push(newTicket);
 
 		//  Display object to page
 		displayTicket(newTicket);
