@@ -1,6 +1,7 @@
-/*The train object set as a function so that the same object could be used multiple times as the variables gets 
-  updated. This function object contains four parameters to make multiple specific objects.*/
-function ticket(depStation, destStation, date, numTrav){	//Skal ikke funksjonsnavn alltid starte med små bokstaver?
+// Implementaiton of task II.1.a and .b
+// The train object set as a function so that the same object could be used multiple times as the variables gets 
+//   updated. This function object contains four parameters to make multiple specific objects.
+function Ticket(depStation, destStation, date, numTrav){
 	this.depStation = depStation;
 	this.destStation = destStation;
 	this.date = date;
@@ -8,11 +9,10 @@ function ticket(depStation, destStation, date, numTrav){	//Skal ikke funksjonsna
 
 	//Gets the total price of the ticet baced on the amount of passangers.
 	this.getPrice = function() { return 100*this.numTrav;}
-	//this.getPrice = function() { return 100*numTrav;}
 }
 
 //  Testing if script loaded:
-console.log("halla"); //Skal vi ha denne?
+console.log("Script Loaded.");
 
 
 //  Get all form elements.
@@ -26,11 +26,11 @@ let submitInfoEl = document.querySelector("#submitInfo");
 
 
 //  Create a date with current time.
-let curDate = new Date();
+const curDate = new Date();
 
 
 //get the ticketList element
-let elTicketList = document.getElementById('ticketsList'); 
+let elTicketList = document.querySelector("#ticketsList");
 let ulElement = document.querySelector("ul");
 
 
@@ -47,21 +47,22 @@ dateEl.addEventListener('blur', (e) => e.target.reportValidity());
 timeEl.addEventListener('blur', (e) => e.target.reportValidity());
 numTravEl.addEventListener('blur', (e) => e.target.reportValidity());
 
-//Add eventlistener for clicks in the ticketList element
+//  Implementation of task II.2, Add eventlistener for clicks in the ticketList element, as seen Ch.6 Duckett.
 elTicketList.addEventListener('click', deleteTicket); 
 
 
-//  Creates array with tickets:
+//  Implementation of task II.1.a. Creates array and add 3 tickets created by using the constructor notation:
 let tickets = [];
 tickets.push(new Ticket("Oslo", "Bergen", new Date(2022, 9, 31, 12, 15, 0), 2));
 tickets.push(new Ticket("Trondheim", "Gjøvik", new Date(2023, 1, 5, 15, 0, 0), 1));
 tickets.push(new Ticket("Bergen", "Trondheim", new Date(2022, 11, 10, 10, 45, 0), 4));
-//  Displays all hardcoded tickets:
+//  Implementation of task II.1.c. Displays all hardcoded tickets using the displayTicket(...) function:
 for (const ticket of tickets) {
 	displayTicket(ticket);
 }
 
 
+//  Implementation of task II.2
 //  Function which checks if form has valid input 
 //    and if so creates a new object and displays it on the page.
 function submitForm(e) {
@@ -85,7 +86,7 @@ function submitForm(e) {
 		submitInfoEl.textContent = "You can't choose the same depart and destination station."; 
 	} else if (ticketDate < curDate) {			//  Inform user if time choosen is invalid:
 		submitInfoEl.style.display = "inline";
-		submitInfoEl.textContent = "You have to choose date and time for a valid time window.";
+		submitInfoEl.textContent = "You can't choose a departure time from the past.";
 	} else {									//  User input valid:
 		
 		//  Hides information about submit from user.
@@ -103,8 +104,8 @@ function submitForm(e) {
 }
 
 
-
-//Function that deletes tickets from a list. The function deletes only if the clicked element's grandparent is "button", and great grandparent is "li". 
+//  Implementation of task II.2
+//  Function that deletes tickets from a list. The function deletes only if the clicked element's grandparent is "button", and great grandparent is "li". As seen in Ducket book, page 268-269
 function deleteTicket(e) {
 	
 	//If user clicked on an element with "button" as its grandparent, and "li" as its great grandparent. 
@@ -118,28 +119,28 @@ function deleteTicket(e) {
 
 		//If the user confirmed the dialog
 		if (confirmDeletingTicket) {
-			//Removing the element's great grandparent, which is a li element, and deleting it
+			//  Implementaiton of task II.2, Removing the element's great grandparent, which is a li element, and deleting it using remove()
 			e.target.parentNode.parentNode.parentNode.remove(); 
 		}
 	}
 } 
 
 
-
+//  Implementation of task II.1.c
 //  Function that takes ticket object and displays it on the page
 function displayTicket(ticket) {
 	//  Creates a string which displays time and date of ticket:
 	let dateString = `${ticket.date.getHours()}:${ticket.date.getMinutes()} ${ticket.date.getDate()}.${ticket.date.getMonth()+1}.${ticket.date.getFullYear()}`; 
+	
 	//  Create string which displays all information of ticket object provided:
-	let string = `${ticket.depStation} til ${ticket.destStation} kl. ${dateString}, ${ticket.getPrice()}kr, ${ticket.numTrav} personer`; 
-	//  Add the ticket information to ticketlist on site, and add a button to delete entry if wanted.  
-	ulElement.innerHTML += `
-	<li>${string} 
-		<button id="deleteButton">
-			<svg height ="20px" width ="20px">
-				<use xlink:href="#delete-icon"/>
-			</svg>
-		</button>
-	</li>`;
+	let string = `${ticket.depStation} til ${ticket.destStation} kl. ${dateString}, ${ticket.getPrice()}kr, ${ticket.numTrav} ${(ticket.numTrav==1)?'person':'personer'}`; 
+	
+	//  Add the ticket information to ticketlist on site, and add a button to delete entry if wanted. As seen in lecture week 41 doom page 87-99. 
+	let newTicketEl = document.createElement('li');
+	let buttonEl = document.createElement('button');
+	buttonEl.innerHTML = `<svg height ="20px" width ="20px"><use xlink:href="#delete-icon"/></svg>`;
+	newTicketEl.append(string, buttonEl); 
+	
+	ulElement.append(newTicketEl);
 }
 
