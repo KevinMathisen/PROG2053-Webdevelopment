@@ -5,7 +5,7 @@ To view the websites, simply open the html files in your browser.
 
 # Prog2053 Project Group 30
 
-Kevin Nikolai Mathisen
-Kavishnayan Nadarajah
-Modestas Volkovas
+Kevin Nikolai Mathisen, 
+Kavishnayan Nadarajah, 
+Modestas Volkovas, 
 Vithujan Paskaralingam
