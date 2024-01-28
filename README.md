@@ -4,8 +4,7 @@ This repository is a collection of all of our assignments in the course Prog2053
 To view the websites, simply open the html files in your browser.
 
 # Prog2053 Project Group 30
-
-Kevin Nikolai Mathisen, 
-Kavishnayan Nadarajah, 
-Modestas Volkovas, 
-Vithujan Paskaralingam
+Kevin, 
+Kavishnayan, 
+Modestas, 
+Vithujan
